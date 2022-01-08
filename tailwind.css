@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps&family=Montserrat:wght@500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+    @apply w-2;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    @apply bg-gray-level-2 rounded-xl;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    @apply bg-orange-level-2 rounded-xl;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-orange-level-1;
+}
+
+.active {
+    @apply fill-orange-level-1 text-orange-level-1;
+}
