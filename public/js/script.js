@@ -1,3 +1,6 @@
+// Animation
+AOS.init();
+
 // Count Down
 let countDownDate = new Date("Apr 28, 2022 00:00:00").getTime();
 let x = setInterval(function() {
@@ -74,10 +77,10 @@ function copyToClipboard(id)
 }
 
 // Play Music
-let buttonPlay = document.querySelector('.play-music');
+let buttonPlay = document.querySelector('.material-icons');
 let audioMusic = document.querySelector('#audioMusic');
 
-function playMusic(){  
+function playMusic(){
   if(buttonPlay.innerHTML === 'pause_circle'){
     buttonPlay.innerHTML = 'play_circle';
     audioMusic.pause();
@@ -90,6 +93,9 @@ function playMusic(){
 $(document).ready(function() {
     // Slide Cover
     $('#slideCover').click( function() {
+      audioMusic.play();
+      buttonPlay.innerHTML = 'pause_circle';
+      
       $('#cover').removeClass('bottom-0').addClass('-bottom-full');
       $('body').removeClass('overflow-y-hidden');
     });
